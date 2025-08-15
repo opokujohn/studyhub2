@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyHub - Smart Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">StudyHub</div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="quiz.html">Quizzes</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="login.html" id="auth-link">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="hero">
+        <h1 id="welcome-message">Welcome to StudyHub</h1>
+        <p>Your smart learning companion for better education</p>
+        <div class="quick-links" id="auth-required" style="display: none">
+          <p>
+            Please <a href="login.html">login</a> to access StudyHub features
+          </p>
+        </div>
+        <div class="quick-links" id="user-features">
+          <a href="notes.html" class="btn btn-primary">Browse Notes</a>
+          <a href="quiz.html" class="btn btn-secondary">Take Quiz</a>
+          <a href="games.html" class="btn btn-accent">Play Games</a>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature-card">
+          <h3>📚 Course Notes</h3>
+          <p>Access comprehensive study materials across various subjects</p>
+        </div>
+        <div class="feature-card">
+          <h3>🧠 Smart Quizzes</h3>
+          <p>
+            Test your knowledge with interactive quizzes and instant feedback
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>🎮 Educational Games</h3>
+          <p>Learn while having fun with our engaging educational games</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - StudyHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">StudyHub</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="quiz.html" class="active">Quizzes</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="login.html" id="auth-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="quiz-container">
+            <div class="quiz-selection" id="quiz-selection">
+                <h1>Choose a Quiz</h1>
+                <div class="quiz-grid">
+                    <div class="quiz-card" onclick="startQuiz('math')">
+                        <h3>Mathematics Quiz</h3>
+                        <p>Test your math skills</p>
+                        <span class="difficulty">Medium</span>
+                    </div>
+                    <div class="quiz-card" onclick="startQuiz('science')">
+                        <h3>Science Quiz</h3>
+                        <p>Explore scientific concepts</p>
+                        <span class="difficulty">Hard</span>
+                    </div>
+                    <div class="quiz-card" onclick="startQuiz('history')">
+                        <h3>History Quiz</h3>
+                        <p>Journey through time</p>
+                        <span class="difficulty">Easy</span>
+                    </div>
+                    <div class="quiz-card" onclick="startQuiz('english')">
+                        <h3>English Quiz</h3>
+                        <p>Language and literature</p>
+                        <span class="difficulty">Medium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-game hidden" id="quiz-game">
+                <div class="quiz-header">
+                    <h2 id="quiz-title"></h2>
+                    <div class="quiz-progress">
+                        <span id="question-counter">1/10</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h3 id="question-text"></h3>
+                    <div class="answers" id="answers"></div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" onclick="previousQuestion()">Previous</button>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="next-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-results hidden" id="quiz-results">
+                <h2>Quiz Complete!</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="final-score">0%</span>
+                    </div>
+                </div>
+                <div class="results-details">
+                    <p>Correct Answers: <span id="correct-count">0</span></p>
+                    <p>Total Questions: <span id="total-questions">0</span></p>
+                </div>
+                <div class="results-actions">
+                    <button class="btn btn-primary" onclick="retakeQuiz()">Retake Quiz</button>
+                    <button class="btn btn-secondary" onclick="backToQuizzes()">Back to Quizzes</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

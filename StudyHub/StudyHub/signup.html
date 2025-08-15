@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - StudyHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>StudyHub</h1>
+                <p>Join our learning community</p>
+            </div>
+            
+            <form onsubmit="handleSignup(event)" class="auth-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="input-icon">👤</span>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                    <span class="input-icon">📧</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                    <span class="input-icon">🔒</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                    <span class="input-icon">🔒</span>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+            </form>
+
+            <div class="auth-links">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+
+            <div class="auth-footer">
+                <a href="index.html" class="back-home">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
