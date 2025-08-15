@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Games - StudyHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">StudyHub</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="quiz.html">Quizzes</a></li>
+                <li><a href="games.html" class="active">Games</a></li>
+                <li><a href="login.html" id="auth-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="games-container">
+            <div class="games-selection" id="games-selection">
+                <h1>Educational Games</h1>
+                <div class="games-grid">
+                    <div class="game-card" onclick="startGame('memory')">
+                        <h3>🧠 Memory Match</h3>
+                        <p>Match pairs of educational terms</p>
+                        <button class="btn btn-primary">Play Now</button>
+                    </div>
+                    <div class="game-card" onclick="startGame('word')">
+                        <h3>📝 Word Builder</h3>
+                        <p>Build words from scrambled letters</p>
+                        <button class="btn btn-primary">Play Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Game -->
+            <div class="game-area hidden" id="memory-game">
+                <div class="game-header">
+                    <h2>Memory Match Game</h2>
+                    <div class="game-stats">
+                        <span>Moves: <span id="moves">0</span></span>
+                        <span>Time: <span id="timer">00:00</span></span>
+                        <button class="btn btn-secondary" onclick="backToGames()">Back</button>
+                    </div>
+                </div>
+                <div class="memory-grid" id="memory-grid"></div>
+            </div>
+
+            <!-- Word Game -->
+            <div class="game-area hidden" id="word-game">
+                <div class="game-header">
+                    <h2>Word Builder Game</h2>
+                    <div class="game-stats">
+                        <span>Score: <span id="word-score">0</span></span>
+                        <span>Level: <span id="word-level">1</span></span>
+                        <button class="btn btn-secondary" onclick="backToGames()">Back</button>
+                    </div>
+                </div>
+                <div class="word-game-content">
+                    <div class="word-hint">
+                        <p>Hint: <span id="word-hint"></span></p>
+                    </div>
+                    <div class="scrambled-word" id="scrambled-word"></div>
+                    <div class="word-input">
+                        <input type="text" id="word-answer" placeholder="Type your answer...">
+                        <button class="btn btn-primary" onclick="checkWord()">Submit</button>
+                    </div>
+                    <div class="word-feedback" id="word-feedback"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/games.js"></script>
+</body>
+</html>

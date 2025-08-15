@@ -1,0 +1,13 @@
+{
+  "users": [],
+  "quizScores": [],
+  "gameProgress": {},
+  "notes": {
+    "lastUpdated": "2024-01-01",
+    "version": "1.0"
+  },
+  "settings": {
+    "theme": "default",
+    "notifications": true
+  }
+}
